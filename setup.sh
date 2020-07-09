@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # oh-my-zsh install
-if [ ! -e /home/alex/.oh-my-zsh ]
+if [ ! -e ~/.oh-my-zsh ]
 then
 	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 	#sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -10,14 +10,13 @@ echo 'oh my zsh installed!'
 
 env_path=$(realpath env.sh)
 written=$(cat ~/.zshrc | grep ${env_path} | wc -l)
-echo ${written}
 if [ ${written} -eq 0 ]
 then
   echo "source ${env_path}" >> ~/.zshrc
 fi
 
 # powerlevel10k install
-if [ ! -e /home/alex/.oh-my-zsh/custom/themes/powerlevel10k ]
+if [ ! -e ~/.oh-my-zsh/custom/themes/powerlevel10k ]
 then
 	git clone https://github.com/romkatv/powerlevel10k.git /home/alex/.oh-my-zsh/custom/themes/powerlevel10k
 fi
@@ -38,4 +37,9 @@ then
   vim
   vim
 fi
-echo 'spacevim installed!'
+echo 'SpaceVim installed!'
+
+echo 'Updateing SpaceVim'
+git -C ~/.SpaceVim pull
+
+cp init.toml ~/.SpaceVim.d
