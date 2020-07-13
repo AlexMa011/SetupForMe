@@ -4,7 +4,6 @@
 if [ ! -e ~/.oh-my-zsh ]
 then
 	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-	#sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 fi
 echo 'oh my zsh installed!'
 
@@ -23,20 +22,19 @@ fi
 echo 'powerlevel10k installed!'
 
 # neovim install 
-if [ ! -e nvim.appimage ]
-then
-	curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-	chmod u+x nvim.appimage
-	vim_path=$(realpath nvim.appimage)
-fi
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+chmod u+x nvim.appimage
+vim_path=$(realpath nvim.appimage)
 echo 'nvim installed!'
 
-if [ ! -e ~/.SpaceVim ]
-then
-  curl -sLf https://spacevim.org/install.sh | bash
-  vim
-  vim
-fi
+curl -sLf https://spacevim.org/install.sh | bash
+pip3 install --user pynvim
+pip3 install --user flake8
+pip3 install --user autoflake
+pip3 install --user yapf
+pip3 install --user isort
+vim
+vim
 echo 'SpaceVim installed!'
 
 echo 'Updateing SpaceVim'
