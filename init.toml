@@ -46,6 +46,6 @@
   python_file_head = [
     '#!/usr/bin/env python'
     '# -*- coding: utf-8 -*-',
-    '# __author__ = "Jiaxu Ma"',
+    '# __author__ = ""',
     ''
   ]

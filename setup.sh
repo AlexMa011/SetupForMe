@@ -19,10 +19,9 @@ fi
 if [ ! -e ~/.oh-my-zsh/custom/themes/powerlevel10k ]
 then
 	git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-  cat ~/.zshrc | sed 's#ZSH_THEME=.*#ZSH_THEME="powerlevel10k/powerlevel10k"#g' > zsh_config
-  mv zsh_config ~/.zshrc
-  source ~/.zshrc
 fi
+cat ~/.zshrc | sed 's#ZSH_THEME=.*#ZSH_THEME="powerlevel10k/powerlevel10k"#g' > zsh_config
+mv zsh_config ~/.zshrc
 echo 'powerlevel10k installed!'
 
 # neovim install 
