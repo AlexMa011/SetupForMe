@@ -17,7 +17,7 @@ fi
 # powerlevel10k install
 if [ ! -e ~/.oh-my-zsh/custom/themes/powerlevel10k ]
 then
-	git clone https://github.com/romkatv/powerlevel10k.git /home/alex/.oh-my-zsh/custom/themes/powerlevel10k
+	git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 fi
 echo 'powerlevel10k installed!'
 
