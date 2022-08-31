@@ -44,3 +44,5 @@ echo 'Updateing SpaceVim'
 git -C ~/.SpaceVim pull
 
 cp init.toml ~/.SpaceVim.d
+vim
+vim
